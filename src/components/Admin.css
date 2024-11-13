@@ -1,0 +1,235 @@
+/* src/components/Admin.css */
+
+/* Reset some basic elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Container for the entire admin panel */
+.admin-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.admin-header h1 {
+  font-size: 2.5rem;
+  color: #1976d2;
+}
+
+.admin-logout-button {
+  background-color: #dc004e;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-logout-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Form Section */
+.admin-form-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.admin-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-input,
+.admin-textarea {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.admin-input:focus,
+.admin-textarea:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.admin-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.admin-button {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #115293;
+}
+
+/* Commands Section */
+.admin-commands-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.admin-commands-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.loading,
+.no-commands {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.admin-command-list {
+  list-style-type: none;
+}
+
+.admin-command-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.admin-command-item:hover {
+  background-color: #f1f3f5;
+}
+
+.admin-command-details {
+  font-size: 1.1rem;
+}
+
+.admin-delete-button {
+  background-color: #dc004e;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-delete-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Analytics Section */
+.admin-analytics-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-analytics-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.admin-analytics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.analytics-item {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-left: 5px solid #1976d2;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analytics-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.analytics-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1976d2;
+}
+
+.analytics-item p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.analytics-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.analytics-item ul li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-header h1 {
+    margin-bottom: 20px;
+  }
+
+  .admin-analytics {
+    grid-template-columns: 1fr;
+  }
+}

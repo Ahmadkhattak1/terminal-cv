@@ -1,0 +1,15 @@
+/* Optional: src/components/PrivateRoute.css */
+
+.loading,
+.error,
+.admin-unauthorized {
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
